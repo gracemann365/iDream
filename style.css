@@ -282,3 +282,94 @@ nav {
 .footer-bottom a:hover {
     text-decoration: underline; /* Underline on hover */
 }
+
+@media only screen and (max-width: 768px) {
+
+    /* Navigation Bar - Two rows */
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .nav-links li {
+        flex: 1 1 50%; /* Each link takes up half of the row */
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    /* Intro Text Section */
+    .intro-text {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-text h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    .intro-text img {
+        margin: 10px 0;
+    }
+
+    .intro-text p {
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
+
+    /* Video Section - Stack videos vertically */
+    .video-section {
+        flex-direction: column;
+    }
+
+    .video-section video {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    /* Items Buy Section - Stack items vertically */
+    .items-buy {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Carousel Section */
+    .carousel-section {
+        height: 50vh;
+    }
+
+    /* Footer Section - Remains the same */
+    .footer-section {
+        padding: 1.5rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-column {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem;
+        padding: 1rem 0;
+    }
+}
