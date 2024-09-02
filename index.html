@@ -12,7 +12,9 @@
 
 <!-- Navigation Bar -->
     <nav>
-        <img src="assets/apple.png" alt="Apple Logo" class="logo" width="24">
+        <div class="fixed-logo">
+            <img src="assets/apple.png" alt="Apple Logo" class="logo" width="24">
+        </div>
         <ul class="nav-links">
             <li><a href="#">Store</a></li>
             <li><a href="#">Mac</a></li>
@@ -201,5 +203,18 @@
         updateSlide(currentIndex);
     });
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var fixedLogo = document.querySelector('.fixed-logo');
+        var nav = document.querySelector('nav');
+    
+        fixedLogo.addEventListener('click', function() {
+            nav.classList.toggle('active');
+        });
+    });
+    </script>
+    
+
+
 </body>
 </html>
