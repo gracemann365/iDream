@@ -21,9 +21,9 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background-color: rgba(245, 245, 245, 0.179); /* Slight transparency to see parallax background */
+    background-color: rgb(255, 255, 255); /* Slight transparency to see parallax background */
     padding: 10px 20px;
-    border-bottom: 1px solid #00000042;
+    border-bottom: 1px solid #000000;
     position: sticky;
     top: 0;
     z-index: 1000; /* Ensures nav stays on top */
@@ -244,7 +244,9 @@ nav {
     text-align: center; /* Center align the text */
     font-size: 0.9rem; /* Smaller font size for footer bottom */
     color: #000000; /* Grey text color */
-    background-color: #ffffff;
+    background-color: #cfcfcf4b;
+    padding: 2% 2%;
+    
 }
 
 .footer-bottom p {
@@ -267,10 +269,11 @@ nav {
  /* Carousel container */
  .carousel {
     position: relative;
-    width: 100%;
+    width: 1    00%;
     max-width: 800px; /* Adjust the max-width as needed */
     margin: auto;
     overflow: hidden;
+    background-color: #ffffffe0;
 }
 
 /* Inner wrapper */
@@ -343,27 +346,38 @@ nav {
 
 /* Marquee container */
 .marquee {
+   
     position: relative;
     width: 100%;
     overflow: hidden;
-    background-color: #f5f5f5;
+    background-color: #000000e8;
     padding: 20px 0;
 }
 
-/* Marquee inner container */
+/* Marquee inner container  right to left default*/
 .marquee-inner {
     display: flex;
     white-space: nowrap;
     width: auto; /* Ensure width adjusts based on content */    
-    animation: marquee 30s linear infinite; /* Adjusted duration for smoother scrolling */
+    animation: marquee 15s linear infinite; /* Adjusted duration for smoother scrolling */
     
 }
+
+/* Marquee inner container left to right */
+.marquee-inner2 {
+    display: flex;
+    white-space: nowrap;
+    width: auto; /* Ensure width adjusts based on content */    
+    animation: marquee-left-to-right 15s linear infinite; /* Adjusted duration for smoother scrolling */
+    
+}
+
 
 /* Individual marquee items */
 .marquee-item {
     display: inline-block;
-    width: 300px; /* Adjust width as needed */
-    height: 400px; /* Fixed height for uniform size */
+    width: 200px; /* Adjust width as needed */
+    height: 300px; /* Fixed height for uniform size */
     margin-right: 20px; /* Space between images */
     text-align: center;
     flex-shrink: 0; /* Prevent items from shrinking */
@@ -386,7 +400,14 @@ nav {
     }
 }
 
-
+@keyframes marquee-left-to-right {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
 
 @media only screen and (max-width: 768px) {
 
@@ -419,9 +440,9 @@ nav {
 nav {
     display: flex;
     flex-direction: column;
-    background-color: rgba(255, 252, 252, 0.89);
+    background-color: rgb(255, 252, 252);
     padding: 10px;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #000000;
     position: fixed; /* Fix position */
     top: -50%; /* Hide off-screen above */
     left: 0; /* Align to the left */
@@ -444,6 +465,8 @@ nav.active {
     flex-direction: column;
     gap: 5px;
     width: 100%;
+    font-weight: 600;
+    font-size: smaller;
 }
 
 .nav-links li {
