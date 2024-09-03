@@ -21,9 +21,9 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background-color: rgb(245, 245, 245); /* Slight transparency to see parallax background */
+    background-color: rgba(245, 245, 245, 0.179); /* Slight transparency to see parallax background */
     padding: 10px 20px;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #00000042;
     position: sticky;
     top: 0;
     z-index: 1000; /* Ensures nav stays on top */
@@ -118,7 +118,7 @@ nav {
     border-radius: 8px;
     overflow: hidden;
     width: calc(33.333% - 20px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
     text-align: center;
     padding: 20px;
 }
@@ -140,7 +140,7 @@ nav {
 }
 
 .price {
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     color: #333;
     font-weight: bold;
 }
@@ -419,4 +419,30 @@ nav.active {
         font-size: 0.8rem;
         padding: 1rem 0;
     }
+}
+
+#movie {
+    width: 80%;
+    height: 60vh;
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+    background-color: #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.video-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    flex: 0 0 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }

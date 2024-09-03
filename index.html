@@ -16,16 +16,16 @@
             <img src="assets/apple.png" alt="Apple Logo" class="logo" width="24">
         </div>
         <ul class="nav-links">
-            <li><a href="#">Store</a></li>
-            <li><a href="#">Mac</a></li>
-            <li><a href="#">iPad</a></li>
-            <li><a href="#" class="selected">iPhone</a></li>
-            <li><a href="#">Vision</a></li>
-            <li><a href="#">Watch</a></li>
-            <li><a href="#">TV & Home</a></li>
-            <li><a href="#">Entertainment</a></li>
-            <li><a href="#">Acessories</a></li>
-            <li><a href="#">Support</a></li>
+            <li><a href="https://www.apple.com/store">Store</a></li>
+            <li><a href="https://www.apple.com/mac/">Mac</a></li>
+            <li><a href="https://www.apple.com/ipad/">iPad</a></li>
+            <li><a href="#iphones" class="selected">iPhone</a></li>
+            <li><a href="https://www.apple.com/apple-vision-pro/">Vision</a></li>
+            <li><a href="https://www.apple.com/watch/">Watch</a></li>
+            <li><a href="https://www.apple.com/tv-home/">TV & Home</a></li>
+            <li><a href="https://www.apple.com/services/">Entertainment</a></li>
+            <li><a href="https://www.apple.com/shop/accessories/all">Acessories</a></li>
+            <li><a href="https://support.apple.com/?cid=gn-ols-home-hp-tab">Support</a></li>
 
         </ul>
     </nav>
@@ -60,45 +60,55 @@
 
 
 <!-- Items Buy Section -->
-<section class="items-buy">
+<section class="items-buy" id="iphones">
     <div class="card">
         <img src="https://www.apple.com/v/iphone/home/bv/images/overview/select/iphone_15_pro__bpnjhcrxofqu_xlarge.png" alt="Item 1" class="card-img">
         <h2 class="model-number">iPhone 15 Pro</h2>
         <p class="tagline">The best of the best.</p>
-        <p class="price">$999</p>
+        <p class="price">From $999 or $41.62/mo. for 24 mo.*</p>
     </div>
     <div class="card">
         <img src="https://www.apple.com/v/iphone/home/bv/images/overview/select/iphone_15__fm75iyqlkjau_xlarge.png" alt="Item 2" class="card-img">
-        <h2 class="model-number">iPhone 15 Pro</h2>
-        <p class="tagline">Innovation at its finest.</p>
-        <p class="price">$1099</p>
+        <h2 class="model-number">iPhone 15</h2>
+        <p class="tagline">A total powerhouse</p>
+        <p class="price">From $799 or $33.29/mo. for 24 mo.*</p>
     </div>
     <div class="card">
         <img src="https://www.apple.com/v/iphone/home/bv/images/overview/select/iphone_14__cjgvgyn9cquu_xlarge.png" alt="Item 3" class="card-img">
         <h2 class="model-number">iPhone 14</h2>
-        <p class="tagline">Elegance meets performance.</p>
-        <p class="price">$1199</p>
+        <p class="tagline">As amazing as ever.</p>
+        <p class="price">From $699 or $29.12/mo. for 24 mo.*</p>
     </div>
     <div class="card">
         <img src="https://www.apple.com/v/iphone/home/bv/images/overview/select/iphone_13__gnwdyqfq7i2y_xlarge.png" alt="Item 4" class="card-img">
         <h2 class="model-number">iPhone 15 Pro</h2>
-        <p class="tagline">Redefine your experience.</p>
-        <p class="price">$1299</p>
+        <p class="tagline">A total powerhouse</p>
+        <p class="price">From $999 or $41.62/mo. for 24 mo.*</p>
     </div>
     <div class="card">
         <img src="https://www.apple.com/v/iphone/home/bv/images/overview/select/iphone_15_pro__bpnjhcrxofqu_xlarge.png" alt="Item 5" class="card-img">
         <h2 class="model-number">iPhone 13</h2>
-        <p class="tagline">State-of-the-art technology.</p>
-        <p class="price">$1399</p>
+        <p class="tagline">All kinds of awesome.</p>
+        <p class="price">From $599 or $24.95/mo. for 24 mo.*</p>
     </div>
     <div class="card">
         <img src="https://www.apple.com/v/iphone/home/bv/images/overview/select/iphone_15__fm75iyqlkjau_xlarge.png" alt="Item 6" class="card-img">
         <h2 class="model-number">iPhone 14</h2>
-        <p class="tagline">Unmatched quality.</p>
-        <p class="price">$1499</p>
+        <p class="tagline">As amazing as ever.</p>
+        <p class="price">From $699 or $29.12/mo. for 24 mo.*</p>
     </div>
 </section>
 
+<!-- Movie Carousel -->
+<section id="movie" class="carousel">
+    <div class="video-container">
+        <video src="assets/iWatch.mp4" class="video" autoplay muted loop></video>
+        <video src="assets/airpods.mp4" class="video" autoplay muted loop></video>
+        <video src="assets/appletv.mp4" class="video"autoplay muted loop></video>
+    </div>
+</section>
+
+<!-- image carousel 
 <section class="carousel-section">
     <div class="carousel-container">
         <div class="carousel-wrapper">
@@ -111,7 +121,7 @@
         <button class="carousel-nav next">&#10095;</button>
     </div>
 </section>
-
+-->
 
 <!-- Sony Footer Section -->
 <section class="sony-footer">
@@ -178,6 +188,11 @@
     <p>&copy; 2024 Apple Inc. All rights reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Sales and Refunds</a> | <a href="#">Legal</a> | <a href="#">Site Map</a></p>
 </div>  
 
+
+
+
+
+
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const slides = document.querySelectorAll('.carousel-slide');
@@ -214,7 +229,25 @@
     });
     </script>
     
-
+<script>let currentIndex = 0;
+    const videos = document.querySelectorAll('.video');
+    const videoContainer = document.querySelector('.video-container');
+    
+    function showNextVideo() {
+        currentIndex = (currentIndex + 1) % videos.length;
+        videoContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+        // Reset and play the next video
+        videos.forEach((video, index) => {
+            video.pause();
+            video.currentTime = 0;
+        });
+        videos[currentIndex].play();
+    }
+    
+    // Automatically switch videos every 10 seconds
+    setInterval(showNextVideo, 10000);
+    </script>
 
 </body>
 </html>
