@@ -108,20 +108,6 @@
     </div>
 </section>
 
-<!-- image carousel 
-<section class="carousel-section">
-    <div class="carousel-container">
-        <div class="carousel-wrapper">
-            <div class="carousel-slide"><img src="https://is1-ssl.mzstatic.com/image/thumb/Ed-B4V6OY0yoxxlksKeulw/738x416.webp" alt="Image 1"></div>
-            <div class="carousel-slide"><img src="https://is1-ssl.mzstatic.com/image/thumb/Features211/v4/a4/4d/cb/a44dcb97-bb82-4d9d-c51c-814b46b4aba7/2c144ab2-a3e2-47c6-b70a-79167d84f73a.png/1679x945sr.webp" alt="Image 2"></div>
-            <div class="carousel-slide"><img src="https://is1-ssl.mzstatic.com/image/thumb/peKuihB1A2e2mm9t8fFGYQ/738x416.webp" alt="Image 3"></div>
-            <div class="carousel-slide"><img src="https://is1-ssl.mzstatic.com/image/thumb/nHV1YavWeg_rV-NyMqFbhQ/738x416.webp" alt="Image 4"></div>
-        </div>
-        <button class="carousel-nav prev">&#10094;</button>
-        <button class="carousel-nav next">&#10095;</button>
-    </div>
-</section>
--->
 
 <!-- Sony Footer Section -->
 <section class="sony-footer">
@@ -131,7 +117,7 @@
 </section>
 
 <!-- Footer Section -->
-<footer class="footer-section">
+<footer class="footer-section"style="margin-bottom: 5%;">
     <div class="footer-container">
         <div class="footer-column">
             <h4>Shop and Learn</h4>
@@ -182,15 +168,57 @@
   
 </footer>
 
-<div class="footer-bottom">
+<div class="footer-bottom" style="margin-bottom: 5%;">
     <p>More ways to shop: Find an Apple Store or other retailer near you. Or call 1-800-MY-APPLE.</p>
     <p>United States</p>
     <p>&copy; 2024 Apple Inc. All rights reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Sales and Refunds</a> | <a href="#">Legal</a> | <a href="#">Site Map</a></p>
 </div>  
+<br>
+<br>
+<br>
+<!--image carousel-->
+<div class="carousel" style="margin-bottom: 5%;">
+    <div class="carousel-inner">
+        <div class="carousel-item">
+            <img src=" https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-mac-nav-202310?wid=400&hei=260&fmt=png-alpha&.v=1696964122666 " alt="Image 1">
+        </div>
+        <div class="carousel-item">
+            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-iphone-nav-202309_GEO_US?wid=400&hei=260&fmt=png-alpha&.v=1692971740190" alt="Image 2">
+        </div>
+        <div class="carousel-item">
+            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-ipad-nav-202405?wid=400&hei=260&fmt=png-alpha&.v=1714168620875" alt="Image 3">
+        </div>
+        <div class="carousel-item">
+            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-vision-pro-nav-202401?wid=400&hei=260&fmt=png-alpha&.v=1702403595269" alt="Image 4">
+        </div>
+        <div class="carousel-item">
+            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-watch-nav-202309?wid=400&hei=260&fmt=png-alpha&.v=1693703822208" alt="Image 1">
+        </div>
+        <div class="carousel-item">
+            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-airpods-nav-202209?wid=400&hei=260&fmt=png-alpha&.v=1660676485885" alt="Image 2">
+        </div>
+        <div class="carousel-item">
+            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-airtags-nav-202108?wid=400&hei=260&fmt=png-alpha&.v=1625783380000" alt="Image 3">
+        </div>
+        <div class="carousel-item">
+            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-appletv-nav-202210?wid=400&hei=260&fmt=png-alpha&.v=1664628458484" alt="Image 4">
+        </div>
+        <div class="carousel-item">
+            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-accessories-nav-202403?wid=400&hei=260&fmt=png-alpha&.v=1707850611597" alt="Image 1">
+        </div>
+        <div class="carousel-item">
+            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-holiday-giftcards-asit-agc-nav-202111?wid=400&hei=260&fmt=png-alpha&.v=1653339351054" alt="Image 2">
+        </div>
+       
+    </div>
+    <button class="carousel-control-prev" onclick="prevSlide()">&#10094;</button>
+    <button class="carousel-control-next" onclick="nextSlide()">&#10095;</button>
+</div>
 
-
-
-
+<br>
+<br>
+<br>
+<br>
 
 
 <script>
@@ -218,6 +246,8 @@
         updateSlide(currentIndex);
     });
 </script>
+
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var fixedLogo = document.querySelector('.fixed-logo');
@@ -247,7 +277,50 @@
     
     // Automatically switch videos every 10 seconds
     setInterval(showNextVideo, 10000);
+
+    
     </script>
+<script>
+    const carouselInner = document.querySelector('.carousel-inner');
+    const items = document.querySelectorAll('.carousel-item');
+    let index = 0;
+    const intervalTime = 3000; // Time between slides in milliseconds (3 seconds)
+
+    function showSlide(i) {
+        if (i >= items.length) {
+            index = 0;
+        } else if (i < 0) {
+            index = items.length - 1;
+        } else {
+            index = i;
+        }
+        const offset = -index * 100;
+        carouselInner.style.transform = `translateX(${offset}%)`;
+    }
+
+    function nextSlide() {
+        showSlide(index + 1);
+    }
+
+    function prevSlide() {
+        showSlide(index - 1);
+    }
+
+    // Autoplay functionality
+    setInterval(nextSlide, intervalTime);
+
+    // Optional: Pause autoplay on hover
+    const carousel = document.querySelector('.carousel');
+    let autoPlayInterval = setInterval(nextSlide, intervalTime);
+
+    carousel.addEventListener('mouseover', () => {
+        clearInterval(autoPlayInterval);
+    });
+
+    carousel.addEventListener('mouseout', () => {
+        autoPlayInterval = setInterval(nextSlide, intervalTime);
+    });
+</script>
 
 </body>
 </html>
